@@ -15,6 +15,11 @@ public class MainActivity extends AppCompatActivity {
 
         FirstFragment firstFragment = FirstFragment.newInstance();
         SecondFragment secondFragment = SecondFragment.newInstance();
+
+        Bundle args = new Bundle();
+        args.putString("TEST", "Frag1");
+        firstFragment.setArguments(args);
+
         getSupportFragmentManager().beginTransaction().replace(R.id.fragmentView, firstFragment).commit();
 
 
